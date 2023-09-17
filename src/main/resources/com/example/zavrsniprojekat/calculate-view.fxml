@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="447.0" prefWidth="616.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.zavrsniprojekat.CalculateController">
+   <children>
+      <TabPane prefHeight="447.0" prefWidth="618.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Otpor vodiča">
+               <content>
+                  <Pane prefHeight="418.0" prefWidth="669.0" style="-fx-background-color: white;">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="194.0" layoutX="257.0" layoutY="69.0" stroke="BLACK" strokeType="INSIDE" width="353.0" />
+                        <Label layoutX="20.0" layoutY="6.0" prefHeight="38.0" prefWidth="254.0" text="Otpor vodiča">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="26.0" layoutY="70.0" text="Površina poprečnog presjeka:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="cmbPovPresjeka" layoutX="26.0" layoutY="92.0" onAction="#onOtporChange" prefHeight="25.0" prefWidth="182.0" />
+                        <Label layoutX="26.0" layoutY="139.0" text="Specifični otpor vodiča:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtSpecOtpor" editable="false" layoutX="25.0" layoutY="163.0" prefHeight="25.0" prefWidth="181.0" />
+                        <Label layoutX="26.0" layoutY="207.0" text="Duljina vodiča:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtDuljina" layoutX="25.0" layoutY="232.0" prefHeight="25.0" prefWidth="181.0" />
+                        <ImageView fitHeight="259.0" fitWidth="343.0" layoutX="261.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@zadatak.PNG" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btnIzracunaj1" layoutX="25.0" layoutY="351.0" mnemonicParsing="false" onAction="#onOtporVodica" prefHeight="42.0" prefWidth="182.0" style="-fx-background-color: GREEN;" text="IZRAČUNAJ" textFill="#f8f8f8">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="26.0" layoutY="289.0" text="Rezultat (Otpor vodiča):">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtRezultat" editable="false" layoutX="25.0" layoutY="315.0" prefHeight="25.0" prefWidth="181.0" />
+                        <Separator layoutX="1.0" layoutY="277.0" prefHeight="0.0" prefWidth="618.0" />
+                        <ImageView fitHeight="95.0" fitWidth="208.0" layoutX="328.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@logo.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="208.0" layoutY="165.0" text="[Ω/km] " />
+                        <Label layoutX="209.0" layoutY="235.0" text="[m] " />
+                        <Label layoutX="210.0" layoutY="317.0" text="[Ω] " />
+                     </children>
+                  </Pane>
+               </content></Tab>
+          <Tab text="Pad napona">
+               <content>
+                  <Pane prefHeight="418.0" prefWidth="669.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label layoutX="18.0" layoutY="45.0" text="Površina poprečnog presjeka:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="20.0" layoutY="96.0" text="Specifični otpor vodiča:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtSpecOtpor1" editable="false" layoutX="19.0" layoutY="118.0" prefHeight="25.0" prefWidth="181.0" />
+                        <Label layoutX="200.0" layoutY="121.0" text="[Ω/km] ">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Label>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="29.0" layoutX="19.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" width="189.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="259.0" layoutX="234.0" layoutY="53.0" stroke="BLACK" strokeType="INSIDE" width="376.0" />
+                        <Label layoutX="201.0" layoutY="225.0" text="[m] " />
+                        <Label layoutX="20.0" layoutY="6.0" prefHeight="38.0" prefWidth="254.0" text="Pad napona">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="319.0" layoutY="335.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="cmbOtporVoda" layoutX="18.0" layoutY="67.0" onAction="#onOtporChange" prefHeight="25.0" prefWidth="182.0" />
+                        <Label layoutX="20.0" layoutY="143.0" text="Snaga:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtSnaga" layoutX="19.0" layoutY="167.0" prefHeight="25.0" prefWidth="181.0" />
+                        <Label layoutX="20.0" layoutY="198.0" text="Duljina vodiča:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtDuljina2" layoutX="19.0" layoutY="221.0" prefHeight="25.0" prefWidth="181.0" />
+                        <Button fx:id="btnIzračunaj2" layoutX="25.0" layoutY="365.0" mnemonicParsing="false" onAction="#onPadNapona" prefHeight="42.0" prefWidth="182.0" style="-fx-background-color: GREEN;" text="IZRAČUNAJ" textFill="#f8f8f8">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="26.0" layoutY="309.0" text="Rezultat (Otpor vodiča):">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtRezultat2" editable="false" layoutX="25.0" layoutY="335.0" prefHeight="25.0" prefWidth="181.0" />
+                        <ImageView fitHeight="248.0" fitWidth="369.0" layoutX="238.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@zadatak2.PNG" />
+                           </image>
+                        </ImageView>
+                        <RadioButton fx:id="rbTrofazni" layoutX="25.0" layoutY="275.0" mnemonicParsing="false" text="Trofazni">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="napon" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rbMonofazni" layoutX="116.0" layoutY="275.0" mnemonicParsing="false" selected="true" text="Monofazni" toggleGroup="$napon">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </RadioButton>
+                        <Label layoutX="26.0" layoutY="246.0" text="Napon:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="201.0" layoutY="171.0" text="[W] " />
+                     </children>
+                  </Pane>
+               </content></Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

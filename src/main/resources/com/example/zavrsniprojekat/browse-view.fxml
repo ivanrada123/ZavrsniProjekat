@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="678.0" prefWidth="1157.0" style="-fx-background-color: #43aa8b;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.zavrsniprojekat.BrowseController">
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" prefHeight="681.0" prefWidth="891.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #34383b;">
+               <children>
+                  <Button fx:id="pretraga" layoutX="25.0" layoutY="448.0" mnemonicParsing="false" onAction="#onPretraga" prefHeight="26.0" prefWidth="184.0" style="-fx-background-color: #ffca3a;" text="PRETRAGA">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Label layoutX="20.0" layoutY="14.0" text="Pretraživanje" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font></Label>
+                  <Label layoutX="24.0" layoutY="197.0" text="Tip:" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font></Label>
+                  <ComboBox fx:id="cmbTip" layoutX="22.0" layoutY="220.0" prefHeight="25.0" prefWidth="223.0" />
+                  <Label layoutX="23.0" layoutY="261.0" text="Naziv:" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font></Label>
+                  <TextField fx:id="txtNaziv" layoutX="22.0" layoutY="281.0" prefHeight="25.0" prefWidth="223.0" />
+                  <Label layoutX="23.0" layoutY="317.0" text="Proizvođač:" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font></Label>
+                  <TextField fx:id="txtProizvodac" layoutX="24.0" layoutY="337.0" prefHeight="25.0" prefWidth="223.0" />
+                  <Label layoutX="27.0" layoutY="391.0" text="Cijena od:" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font></Label>
+                  <TextField fx:id="txtCod" layoutX="97.0" layoutY="386.0" prefHeight="25.0" prefWidth="61.0" />
+                  <Label layoutX="161.0" layoutY="390.0" text="do:" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font></Label>
+                  <TextField fx:id="txtCdo" layoutX="184.0" layoutY="385.0" prefHeight="25.0" prefWidth="61.0" />
+                  <Button fx:id="btnClear" layoutX="217.0" layoutY="447.0" mnemonicParsing="false" onAction="#onClearS" prefHeight="26.0" prefWidth="26.0" style="-fx-background-color: #d62929;" text="X" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children></AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="tblElementi" layoutY="-1.0" onMouseClicked="#onSelectElement" prefHeight="679.0" prefWidth="618.0">
+                    <columns>
+                      <TableColumn fx:id="colTip" prefWidth="101.0" text="Tip" />
+                      <TableColumn fx:id="colNaziv" prefWidth="106.0" text="Naziv" />
+                        <TableColumn fx:id="colCijena" prefWidth="64.0" text="Cijena" />
+                        <TableColumn fx:id="colProizvodac" prefWidth="133.0" text="Proizvođač" />
+                        <TableColumn fx:id="colOpis" prefWidth="213.0" text="Opis" />
+                    </columns>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <Label layoutX="914.0" layoutY="8.0" text="Pregled" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="914.0" layoutY="43.0" text="*Tip:" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="916.0" layoutY="101.0" text="*Naziv:" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font></Label>
+      <TextField fx:id="txtNaziv2" layoutX="916.0" layoutY="120.0" prefHeight="25.0" prefWidth="223.0" />
+      <Label layoutX="916.0" layoutY="155.0" text="Proizvođač:" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font></Label>
+      <TextField fx:id="txtProizvodac2" layoutX="916.0" layoutY="174.0" prefHeight="25.0" prefWidth="223.0" />
+      <Label layoutX="916.0" layoutY="216.0" text="*Cijena:" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font></Label>
+      <TextField fx:id="txtC2" layoutX="970.0" layoutY="212.0" prefHeight="25.0" prefWidth="167.0" />
+      <Label fx:id="lbl1" layoutX="920.0" layoutY="373.0" text="-" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="lbl2" layoutX="919.0" layoutY="429.0" text="-" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="lbl4" layoutX="920.0" layoutY="537.0" text="-" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="lbl3" layoutX="920.0" layoutY="485.0" text="-" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font></Label>
+      <TextField fx:id="txtVar1" layoutX="918.0" layoutY="396.0" prefHeight="25.0" prefWidth="223.0" />
+      <TextField fx:id="txtVar2" layoutX="919.0" layoutY="450.0" prefHeight="25.0" prefWidth="223.0" />
+      <TextField fx:id="txtVar4" layoutX="920.0" layoutY="557.0" prefHeight="25.0" prefWidth="216.0" />
+      <TextField fx:id="txtVar3" layoutX="921.0" layoutY="504.0" prefHeight="25.0" prefWidth="216.0" />
+      <Button fx:id="btnNovi" layoutX="1109.0" layoutY="32.0" mnemonicParsing="false" onAction="#onClearN" prefHeight="25.0" prefWidth="28.0" style="-fx-background-color: green; -fx-border-color: white; -fx-border-radius: 3; -fx-border-width: 2;" text="+" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnIspravi" layoutX="921.0" layoutY="590.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="105.0" style="-fx-background-color: green;" text="ISPRAVI" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnBrisi" layoutX="919.0" layoutY="635.0" mnemonicParsing="false" onAction="#onBrisi" prefHeight="25.0" prefWidth="216.0" style="-fx-background-color: #d62929;" text="OBRIŠI" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <ComboBox fx:id="cmbTip2" layoutX="916.0" layoutY="69.0" onAction="#onTipPromjena" prefHeight="25.0" prefWidth="223.0" />
+      <Label fx:id="lblID" layoutX="1083.0" layoutY="10.0" text="X" textFill="WHITE" visible="false" />
+      <Label fx:id="lblOpis" layoutX="918.0" layoutY="291.0" text="Opis:" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtOpis" layoutX="918.0" layoutY="310.0" prefHeight="53.0" prefWidth="223.0" />
+      <Button fx:id="btnUnesi" layoutX="919.0" layoutY="602.0" mnemonicParsing="false" onAction="#onUnos" prefHeight="26.0" prefWidth="216.0" style="-fx-background-color: #ffca3a;" text="UNESI NOVI">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="916.0" layoutY="262.0" text="Ser. br:" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSB" layoutX="970.0" layoutY="258.0" prefHeight="25.0" prefWidth="167.0" />
+   </children>
+</AnchorPane>
