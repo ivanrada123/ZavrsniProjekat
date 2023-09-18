@@ -1,0 +1,1 @@
+SELECT * FROM zavrsniprojekat.otpornost_voda;
