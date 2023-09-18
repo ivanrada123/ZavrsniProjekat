@@ -36,10 +36,10 @@ public class CalculateController implements Initializable {
         try {
             Connection con = DBConnector.getConnection();
 
-            ResultSet rs = con.createStatement().executeQuery("SELECT * FROM otpornost_voda");
+            ResultSet rs = con.createStatement().executeQuery("SELECT presjek_vodica FROM otpornost_voda");
 
             while (rs.next()) {
-                combo1.add(String.valueOf(rs.getInt("broj_zila"))  + " x " + String.valueOf(rs.getDouble("presjek_vodica")));
+                combo1.add(String.valueOf(rs.getDouble("presjek_vodica")));
             }
         } catch (SQLException e) {
             // TODO Auto-generated catch block
@@ -56,18 +56,13 @@ public class CalculateController implements Initializable {
         ComboBox comboBox = (ComboBox) event.getSource();
         String str= comboBox.getSelectionModel().getSelectedItem().toString();
 
-        String[] parts = str.split(" x ");
-
-        int br1 = Integer.parseInt(parts[0]);
-        double br2 = Double.parseDouble(parts[1]);
-
-        povPoprecnog = br1 * br2;
+        povPoprecnog = Double.parseDouble(str);
 
         try {
             Connection con = DBConnector.getConnection();
 
             ResultSet rs = con.createStatement().executeQuery("SELECT otpor_vodica_20c FROM otpornost_voda" +
-                    " WHERE broj_zila = " + br1 + " AND presjek_vodica = " + br2);
+                    " WHERE presjek_vodica = " + povPoprecnog);
 
             while (rs.next()) {
                 txtSpecOtpor.setText(rs.getString("otpor_vodica_20c"));
@@ -84,7 +79,9 @@ public class CalculateController implements Initializable {
     @FXML
     public void onOtporVodica(ActionEvent event){
 
-        double rez = Double.parseDouble(txtDuljina.getText()) / povPoprecnog * Double.parseDouble(txtSpecOtpor.getText());
+        System.out.println(povPoprecnog);
+
+        double rez = ((Double.parseDouble(txtDuljina.getText())*10) * Double.parseDouble(txtSpecOtpor.getText())) / povPoprecnog;
 
         txtRezultat.setText(String.valueOf(rez));
     }
@@ -103,7 +100,7 @@ public class CalculateController implements Initializable {
             napon = 400*400;
         }
 
-        rez = String.valueOf((mnozilac * Double.parseDouble(txtSnaga.getText()) * Double.parseDouble(txtDuljina2.getText()) * Double.parseDouble(txtSpecOtpor1.getText())) / napon * 100) + "%";
+        rez = String.valueOf(((mnozilac * Double.parseDouble(txtSnaga.getText()) * (Double.parseDouble(txtDuljina2.getText())/100) * Double.parseDouble(txtSpecOtpor1.getText())) / napon) * 100) + "%";
 
         txtRezultat2.setText(rez);
 
