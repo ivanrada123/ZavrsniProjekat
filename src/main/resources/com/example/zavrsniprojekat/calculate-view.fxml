@@ -26,13 +26,13 @@
                            </font>
                         </Label>
                         <ComboBox fx:id="cmbPovPresjeka" layoutX="26.0" layoutY="92.0" onAction="#onOtporChange" prefHeight="25.0" prefWidth="182.0" />
-                        <Label layoutX="26.0" layoutY="139.0" text="Specifični otpor vodiča:">
+                        <Label layoutX="26.0" layoutY="139.0" text="Jedinični otpor voda pri 20°C:">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Label>
                         <TextField fx:id="txtSpecOtpor" editable="false" layoutX="25.0" layoutY="163.0" prefHeight="25.0" prefWidth="181.0" />
-                        <Label layoutX="26.0" layoutY="207.0" text="Duljina vodiča:">
+                        <Label layoutX="26.0" layoutY="207.0" text="Duljina kabla:">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -61,8 +61,9 @@
                            </image>
                         </ImageView>
                         <Label layoutX="208.0" layoutY="165.0" text="[Ω/km] " />
-                        <Label layoutX="209.0" layoutY="235.0" text="[m] " />
-                        <Label layoutX="210.0" layoutY="317.0" text="[Ω] " />
+                        <Label layoutX="209.0" layoutY="235.0" text="[km] " />
+                        <Label layoutX="210.0" layoutY="317.0" text="[Ωm] " />
+                        <Label layoutX="209.0" layoutY="96.0" text="[mm2]" />
                      </children>
                   </Pane>
                </content></Tab>
@@ -75,7 +76,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label layoutX="20.0" layoutY="96.0" text="Specifični otpor vodiča:">
+                        <Label layoutX="20.0" layoutY="96.0" text="Jedinični otpor voda pri 20°C:">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -88,7 +89,7 @@
                         </Label>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="29.0" layoutX="19.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" width="189.0" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="259.0" layoutX="234.0" layoutY="53.0" stroke="BLACK" strokeType="INSIDE" width="376.0" />
-                        <Label layoutX="201.0" layoutY="225.0" text="[m] " />
+                        <Label layoutX="201.0" layoutY="225.0" text="[km] " />
                         <Label layoutX="20.0" layoutY="6.0" prefHeight="38.0" prefWidth="254.0" text="Pad napona">
                            <font>
                               <Font name="Arial Bold" size="18.0" />
@@ -117,7 +118,7 @@
                               <Font name="Arial Bold" size="14.0" />
                            </font>
                         </Button>
-                        <Label layoutX="26.0" layoutY="309.0" text="Rezultat (Otpor vodiča):">
+                        <Label layoutX="26.0" layoutY="309.0" text="Rezultat (Pad napona):">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -147,6 +148,7 @@
                            </font>
                         </Label>
                         <Label layoutX="201.0" layoutY="171.0" text="[W] " />
+                        <Label layoutX="209.0" layoutY="339.0" text="[%]" />
                      </children>
                   </Pane>
                </content></Tab>
