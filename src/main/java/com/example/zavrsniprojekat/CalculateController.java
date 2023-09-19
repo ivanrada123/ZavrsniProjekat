@@ -100,7 +100,7 @@ public class CalculateController implements Initializable {
             napon = 400*400;
         }
 
-        rez = String.valueOf(((mnozilac * Double.parseDouble(txtSnaga.getText()) * (Double.parseDouble(txtDuljina2.getText())/100) * Double.parseDouble(txtSpecOtpor1.getText())) / napon) * 100) + "%";
+        rez = String.valueOf(((mnozilac * Double.parseDouble(txtSnaga.getText()) * (Double.parseDouble(txtDuljina2.getText())/100) * Double.parseDouble(txtSpecOtpor1.getText())) / napon) * 100);
 
         txtRezultat2.setText(rez);
 
