@@ -9,7 +9,9 @@ public class DBConnector {
     // Poveznica na bazu
 
     public static Connection getConnection() throws SQLException {
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/zavrsniprojekat?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=CET", "root", "root");
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/zavrsniprojekat?" +
+                "useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=" +
+                "false&serverTimezone=CET", "root", "root");
 
         return connection;
     }

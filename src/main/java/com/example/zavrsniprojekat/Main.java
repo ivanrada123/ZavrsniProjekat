@@ -17,6 +17,7 @@ public class Main extends Application {
         stage.setY(200);
         stage.setScene(scene);
         stage.show();
+        stage.setMaximized(false);
     }
 
     public static void main(String[] args) {

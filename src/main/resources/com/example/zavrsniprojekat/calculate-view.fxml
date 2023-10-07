@@ -32,7 +32,7 @@
                            </font>
                         </Label>
                         <TextField fx:id="txtSpecOtpor" editable="false" layoutX="25.0" layoutY="163.0" prefHeight="25.0" prefWidth="181.0" />
-                        <Label layoutX="26.0" layoutY="207.0" text="Duljina kabla:">
+                        <Label layoutX="26.0" layoutY="207.0" text="Duljina kabela:">
                            <font>
                               <Font size="14.0" />
                            </font>
