@@ -277,7 +277,7 @@ public class BrowseController implements Initializable {
                 e.printStackTrace();
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Obavijest!");
-                alert.setHeaderText("Provjerite da li ste unijeli sve obavezne podatke!");
+                alert.setHeaderText("Provjerite jeste li unijeli sve obavezne podatke!");
                 alert.showAndWait();
             }
 
@@ -285,7 +285,7 @@ public class BrowseController implements Initializable {
         } else {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Obavijest!");
-            alert.setHeaderText("Provjerite da li ste unijeli sve obavezne podatke!");
+            alert.setHeaderText("Provjerite jeste li unijeli sve obavezne podatke!");
             alert.showAndWait();
         }
     }
