@@ -1,4 +1,4 @@
-package com.example.zavrsniprojekat;
+package com.example.zavrsniprojekt;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

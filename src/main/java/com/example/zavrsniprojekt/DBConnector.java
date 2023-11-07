@@ -1,4 +1,4 @@
-package com.example.zavrsniprojekat;
+package com.example.zavrsniprojekt;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

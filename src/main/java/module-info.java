@@ -4,6 +4,6 @@ module com.example.zavrsniprojekat {
     requires java.sql;
 
 
-    opens com.example.zavrsniprojekat to javafx.fxml;
-    exports com.example.zavrsniprojekat;
+    opens com.example.zavrsniprojekt to javafx.fxml;
+    exports com.example.zavrsniprojekt;
 }

@@ -1,4 +1,4 @@
-package com.example.zavrsniprojekat;
+package com.example.zavrsniprojekt;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
